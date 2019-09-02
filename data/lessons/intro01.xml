@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Lesson 01a - Introduction
+-->
+<lesson status="1.1">
+ 
+    <slide title="Introduction to Internet Software" layout="normal">
+        <p>This course will help you build a robust RESTful
+            backend webapp.</p>
+        <p>It presents a comprehensive set of skills, but not all of an MVC framework!</p>
+        <p>It shows "best practices", but not the only way to
+            use the framework.</p>
+        <p>The course assumes you know O-O programming,
+            and that you have some familiarity with HTML.</p>
+            <p>You asked your option head for more programming, and here you go - PHP!</p>
+    </slide>
+
+    
+    <slide title="What Makes a Good Webapp?" layout="normal">
+        <br/>
+        <div class="left">
+            "Good" content:
+            <ul>
+                <li>Informative</li>
+                <li>Interesting</li>
+                <li>Exclusive<br/></li>
+            </ul>
+        </div>
+        <div class="right">
+            "Good" properties:
+            <ul>
+                <li>Dynamic</li>
+                <li>Personalized</li>
+                <li>Scaleable</li>
+            </ul>
+        </div>
+    </slide>
+
+    <slide title="What Skills Does a Developer Need?" layout="normal">
+        <ul>
+            <li>Frameworks &amp; Object Models
+                <ul>
+                    <li>HTTP &amp; web server</li>
+                    <li>Distributed systems &amp; deployment</li>
+                    <li>Server-side &amp; client-side logic</li>
+                </ul>
+            </li>
+            <li>Conventions
+                <ul>
+                    <li>HTML, XML, CSS, JSON</li>
+                </ul>
+            </li>
+            <li>Tools for convenience &amp; productivity
+                <ul>
+                    <li>IDE (NetBeans)</li>
+                    <li>XAMPP</li>
+                    <li>Unit testing, RDBMS</li>
+                    <li>Github, gitflow, CI -> devops</li>
+                </ul>
+            </li>
+            <li>Software ... MVC pattern-driven</li>
+        </ul>
+
+    </slide>
+
+    <slide title="Websites" layout="normal">
+        <p>Webpages (HTML), intended for browser. </p>
+        <p>Typified by:</p>
+        <ul>
+            <li>HTML for page structure</li>
+            <li>CSS for layout</li>
+            <li>Graphics for aesthetics</li>
+            <li>Javascript for client-side logic</li>
+            <li>Support technologies for high availability, fast response, analytics</li>
+        </ul>
+    </slide>
+
+    <slide title="Webapps" layout="normal">
+        <p>To "website", add...</p>
+        <ul>
+            <li>Usecase driven (not sitemap)</li>
+            <li>Business logic</li>
+            <li>Data driven, dynamic</li>
+            <li>Security ... CSRF, encoding, sanitization</li>
+            <li>Internationalization &amp; localization</li>
+            <li>Authentication &amp; personalization</li>
+            <li>Support technologies for scalability, management, integration</li>
+        </ul>
+    </slide>
+
+    <slide title="DevOps" layout="normal">
+        <p>The current trend in software development process!</p>
+        <ul>
+            <li>Software development methodology</li>
+            <li>Communication, collaboration &amp; integration</li>
+            <li>Developers &amp; IT staff</li>
+            <li>Highly automated, often cloud-based</li>
+            <li>Targets product delivery, quality assurance, feature development, maintenance releases, and issue tracking</li>
+            <li>Big on agile management!</li>
+        </ul>
+    </slide>
+
+    <slide title="Technical Terminology" layout="normal">
+        <p class="center">
+            <strong>Glue:</strong>
+            <br/>
+            <br/>
+            A generic term for any interface logic or <br/>
+            protocol that connect two component blocks.
+        </p>
+        <p class="center">
+            <img class="scale" width="698" height="400" src="/pix/lessons/x/x01.jpg"/>
+        </p>    
+    </slide>
+
+    <slide title="Standard Glue (no choice)" layout="normal">
+        <p class="center">
+            Transport: HTTP, HTTPS, AJAX, web sockets, AMQP</p>
+        <p class="center">
+            Representation: XML, JSON, RSS</p>
+        <p class="center">
+            Application: RPC, SOA, REST</p>
+        <p class="center">
+            Infrastructure: email, messaging, services
+        </p>
+    </slide>
+
+</lesson>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lesson status="v2">
+    
+    <!-- The meat of the presentation -->
+    <slide title="Your Instructors" layout="normal">
+        <div class="left">
+             <h2>Jim Parry</h2>
+            <ul>
+                <li>Day job: BCIT instructor (retired?); ACIT3890 too</li>
+                <li>Off campus: webapp developer, for fun and sometimes profit</li>
+                <li>Interests: open source cat herder (Project Lead, CodeIgniter)</li>
+            </ul>
+        </div>
+        <div class="right">
+            <h2>Xavier De Pauw</h2>
+            <ul>
+                <li>Day job: BCIT international instructor; COMP1111 too</li>
+                <li>Off campus: ...</li>
+                <li>Interests: ...</li>
+            </ul>
+        </div>           
+     </slide>
+
+    <slide title="Course Outcomes" layout="normal">
+        <p>See the "course goals" section in the course outline.</p>
+        <ol>
+            <li>Build a robust RESTful webapp backend, to complement your option projects</li>
+            <li>Demonstrate proper usage of distributed system glue</li>
+            <li>Demonstrate proper team collaboration for webapp development</li>
+        </ol>
+    </slide>
+
+  <slide title="Our Course Hub" layout="normal">
+        <h2>
+            <a href="https://dgpt4711.jlparry.com" target="_blank">COMP4711 
+                Course Hub</a>
+        </h2>
+        <ul>
+            <li>
+                <a href="{outline}" target="_blank">
+                    Course outline</a> on BCIT site?</li>
+            <li>Organizer, lessons, tutorials, and lab/assignment writeups all on our course hub.</li>
+            <li>Material can be viewed as slideshow or webpage.</li>
+            <li>Code examples or starter projects all shared as 
+                <a href="https://github.com/jedi-academy" target="_blank">Github 
+                    repositories</a>, to be forked/downloaded.</li>
+            <li>Labs/walkthroughs done individually or in pairs, on github(?!); 
+                readme (with a link to your repo) is all that is submitted to a 
+                D2L dropbox.</li>
+            <li>Assignments done in teams, on github(?!); readme (with links) 
+                is submitted to D2L dropbox</li>
+            <li>Labs start: this week (after lecture)</li>
+        </ul>
+    </slide>
+
+    <slide title="GIT Repositories" layout="normal">
+        <p>Throughout this lab, and indeed this course, frequent mention is made of
+            "github repositories". The course hub, and *all* of the starter and example projects
+            are stored on github.com.</p>
+        <p>Your work is to be completed in a public GIT repository,</p>        
+    </slide>
+
+    <slide title="Grading" layout="normal">
+        <ul>
+            <li>10%: lab participation</li>
+            <li>40%: 8 labs</li>
+            <li>30%: 2 assignments</li>
+            <li>20%: Final assignment/project</li>
+        </ul>
+        <p>Attendance expected, missing more than 2 labs =&gt; U</p>
+        <p>Labs: individual or varying pairs, rubric-based assessment</p>
+        <p>Assignments: teams of 3-5, each building on the previous,
+            rubric-based assessment</p>
+    </slide>
+
+    <slide title="You ..." layout="normal">
+         <ul>            
+            <li>Required proficiency: programming, Java (COMP2526) or C (COMP2510)</li>
+            <li>Somewhat proficient: O-O programming, O-O analysis and design (patterns!)</li>
+            <li>Assumed: English, basic math, basic relational database, 
+                basic networks, basic algorithms, basic HTML/CSS</li>
+            <li>Motivated, committed</li>
+            <li>Bonus: PHP, github, FOSS</li>
+        </ul>
+    </slide>
+
+</lesson>

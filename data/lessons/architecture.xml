@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lesson status="1.2">
+ 
+    <slide title="Webapp Architectures" layout="normal">
+        <p>This presentation describes the most
+        common webapp architectures.</p>
+    </slide>
+
+    <slide title="CLIENT-SERVER ARCHITECTURE" layout="normal" tag="tag1">
+        <div class="left">
+            <p>A distributed system is one in which the components are
+                conceptually or literally on different servers.</p>
+            <p>These can be arranged formally or informally.</p>
+            <br/>
+            <img class="scale" src="/pix/lessons/y/01.png"/>
+        </div>
+        <div class="right">
+            <p>A more formal arrangement affords the opportunity for
+                more rigorous security between external and internal
+                components, which will influence connection
+                technology choices.</p>
+            <img class="scale" src="/pix/lessons/y/02.gif"/>
+        </div>
+    </slide>
+    
+     <slide title="Remote Procedure Calls (RPC)" layout="normal" >
+        <div class="left">
+            <br/>
+            <img class="scale" src="/pix/lessons/r1.png"/>
+        </div>
+        <div class="right">
+            <p>With a conventional Remote Procedure Call technique,
+                like XML-RPC, arguments for a remote procedure are
+                converted into a transportable data format, and sent to the RPC
+                server. The data structure is dictated by the remote method's signature.</p>
+            <p> The arguments are extracted remotely, and passed to
+                the appropriate method of the handling object there.
+                The reverse process is used to return results or
+                an error/fault message.</p>
+        </div>
+    </slide>
+
+    <slide title="Service Oriented Architecture (SOA)" layout="normal" >
+        <div class="left">
+            <br/>
+            <img class="scale" src="/pix/lessons/r2.png"/>
+        </div>
+        <div class="right">
+            <p>A Service Oriented Architecture (SOA) technique is similar to RPC,
+                except that a server needs to register with a naming service, and the
+                client needs to consult the naming service to locate
+                a suitable server to send requests to.</p>
+            <p>Arguments for a remote service, and the response, are
+                converted into a transportable data format, and exchanged between client
+                and server using one of several delivery methods. The data structure is dictated by the configuration
+                provided to the naming service, for both client and server.</p>
+        </div>
+    </slide>
+
+    <slide title="Representational State Transfer (REST)" layout="normal">
+        <div class="left">
+            <br/>
+            <img class="scale" src="/pix/lessons/y/11.png"/>
+        </div>
+        <div class="right">
+            <p>REST  is the current "darling" of inter-application "glue".</p>
+            <p>It provides for flexible transport protocols, flexible data representation
+                formats, and guidelines for expected client and server behavior.</p>
+            <p>There is, alas, still a lot of room for interpretation, and this
+                is more often called "RESTful".</p>
+        </div>           
+    </slide>
+
+    <slide title="Microservices" layout="normal">
+        <div class="left">
+            <br/>
+            <img class="scale" src="/pix/lessons/y/04.png"/>
+        </div>
+        <div class="right">
+            <p>Microservices are an emerging trend, particularly with
+                cloud computing platforms.</p>
+            <p>The notion is to have multiple fine-grained servers
+                rather than fewer coarse-grained servers. The microservices
+                are meant to be small, easy to replace, and independently deployable.</p>
+            <p>Caution (from Wikipedia): there is no industry consensus yet 
+                regarding the properties of microservices, and
+                an official definition is missing as well. </p>
+        </div>           
+    </slide>
+
+</lesson>

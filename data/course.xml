@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE course SYSTEM "../xml/course.dtd">
+<course>
+    <!-- Course metadata -->
+    <code>comp4711</code>
+    <title>Introduction to Internet Software Development (Dongguan)</title>
+    <subtitle>COMP4711</subtitle>
+    <author>James L. Parry</author>
+    <email>jparry1@bcit.ca</email>
+    <outline>http://www.bcit.ca/study/outlines/20191086101</outline>
+    <session>Fall 2019</session>
+    <school>B.C.I.T. International</school>
+    <site>http://www.bcit.ca/cas/computing/</site>
+    <license>MIT License</license>
+	
+	<!-- D2L specifric fields -->
+	<ou>594147</ou>
+        <crn>99999</crn>
+    
+    <!-- An introduction, shown at the top of the course homepage -->
+    <intro>
+        This webapp is an ongoing experiment to leverage the course materials for 
+        COMP4711 at BCIT, making them easier to access.
+    </intro>
+</course>

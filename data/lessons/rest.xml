@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lesson status="1.2>
+ 
+    <slide title="REST Architectures" layout="normal">
+        <p>This presentation describes the 
+            Representational State Transfer (REST)
+            philisophy.</p>
+    </slide>
+
+    <slide title="REST PHILOSOPHY" layout="normal"  tag="tag2">
+        <div>
+            <p>REST is an architectural style or philosophy, not a standard.</p>
+            <ul>
+                <li>Map resources (not usecases) to URLs</li>
+                <li>Map CRUD usecases to HTTP types</li>
+                <li>Pass all needed data (representational state)</li>
+                <li>Accept or deliver multiple formats (XML, JSON, JSONP, CSV, XHTML, text)</li>
+            </ul>
+        </div>    
+    </slide>
+
+    <slide title="REST URLs" layout="normal" >
+        <div class="left">
+            <p>A REST endpoint is intended to identify a resource, and
+                the intended action is denoted by the type of HTTP
+                request sent.</p>
+            <img class="scale" src="/pix/lessons/y/12.png"/>
+        </div>
+        <div class="right">
+            <p>An example, where any data would be part of the HTTP
+                message payload:</p>
+            <ul>
+                <li>Http-get: <code>/product</code> returns a list of products</li>
+                <li>Http-get: <code>/product/123</code> returns product 123</li>
+                <li>Http-post: <code>/product/123</code> creates product 123</li>
+                <li>Http-put: <code>/product/123</code> updates product 123</li>
+                <li>Http-delete: <code>/product/123</code> deletes product 123</li>
+            </ul>    
+        </div>           
+    </slide>
+
+    <slide title="REST Implementation" layout="normal" >
+        <div class="left">
+            <p>A REST client needs to convert a local object into an acceptable
+                data format, and to then emit the kind of HTTP request appropriate 
+                to the intended action.</p> 
+            <p>A REST server needs to convert an incoming object state representation
+                into a local object, and to dispatch the request to
+                an appropriate handling object/method based on the HTTP request type.</p>
+        </div>
+        <div class="right">
+            <p>In the diagram below, "Trip Management" provides a REST server
+                endpoint for users on smartphones, and it has a REST client
+                which sends requests to the "Passenger Management" REST server
+                endpoint.</p>       
+            <img class="scale" src="/pix/lessons/y/13.png"/>
+        </div>       
+    </slide>
+
+    <slide title="&quot;RESTful&quot; STANDARDS" layout="normal" tag="tag3">
+        <p>This sounds wonderful, no? What could possibly go wrong?</p>
+        <p>The biggest problem is that there is no REST standard.</p>
+        <p>Different developers, large and small, have chosen to interpret
+            the REST philosophy differently or only partially, with confusing
+            and/or conflicting implementations and expectations.</p>
+        <p>The industry consensus is, that conforming to two or more
+            of the REST principles, fully or partially, entitles you
+            to claim to be "RESTful".</p>
+     </slide>
+
+
+</lesson>
