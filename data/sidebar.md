@@ -5,9 +5,9 @@ Office: DTC-528 (Vancouver)
 Online collaboration: wechat, zoom 
 
 **Xavier De Pauw**  
-<TBA>   
+Email T.B.A.  
 Office: TBA (Dongguan)  
-Online collaboration: wechat, zoom
+Online collaboration: wechat, zoom  
 
 ## Desire2Learn LMS
 [Calendar](https://learn.bcit.ca/d2l/le/calendar/{ou})  
