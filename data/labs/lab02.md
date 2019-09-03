@@ -110,7 +110,7 @@ been updated, and it hopefully will be mergeable.
         git config --global user.name <name>
         git config --global user.email "your_email@example.com"
 
--   You will need the [gnupg](https://www.gnupg.org/) tool, ti digitally sign your commits
+-   You will need the [gnupg](https://www.gnupg.org/) tool, to digitally sign your commits
 -   Setup your GPG signing key, and register it with your github account.
 
         # generate a new pgp key: (better to use gpg2 instead of gpg)
