@@ -5,7 +5,7 @@ Office: DTC-528 (Vancouver)
 Online collaboration: wechat, zoom 
 
 **Xavier De Pauw**  
-<xavier@depauw.ca>   
+<TBA>   
 Office: TBA (Dongguan)  
 Online collaboration: wechat, zoom
 
