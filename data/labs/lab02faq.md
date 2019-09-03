@@ -1,5 +1,5 @@
 #Lab #2 - FAQ
-COMP4711 - BCIT - Winter 2019
+COMP4711 - BCIT/DGPT - Fall 2019
 
 ## Anything we should have noticed about our team repo?
 

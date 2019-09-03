@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <lesson status="1.4">
-    <!-- Activity metadata ... override anything from the course or organizer -->
 
     <!-- Agenda -->
 
@@ -16,7 +15,6 @@
             <a href="https://guides.github.com/activities/forking/" target="_blank">
                 forking projects</a>.
         </p>
-        <p>Don't forget to complete the online survey after reading this!</p>
     </slide>
 
     <slide title="Centralized Workflow" layout="normal" tag="tag1">

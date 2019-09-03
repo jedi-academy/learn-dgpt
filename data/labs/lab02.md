@@ -1,26 +1,9 @@
 # Lab #2 - Collaborative Workflow
-COMP4711 - BCIT - Winter 2019
+COMP4711 - BCIT/DGPT - Fall 2019
 
 ## Lab Goals
 
 This week, you will be practicing collaborative workflow.
-
-## UPDATE
-
-I am pleased with the progress I observed in lab :)
-
-If your team has "got" the signing, branching, and meaningful titles
-for these and commits down pat; then I am happy to consider your "round 2"
-sufficient and will mark it. You would then not have to do round 3.
-
-If your team feels they can improve, or wants the practice, then by all
-means continue with round 3 as originally written up!
-
-Either way, you still need something in the dropbox, i.e. a link, so
-that I can respond with feedback and a grade.
-
-I didn't setup the dropbox originally, and have fixed that.
-The new ("proper") dropbox also has a marking rubric.
 
 ## Lab Process
 
@@ -42,7 +25,7 @@ member.
 
 Submit a readme *text* file, or a submission comment, to the lab dropbox. 
 It should contain a link to your **team**'s github repository. 
-I can find the team member repositories through it.
+We can find the team member repositories through it.
 
 Due: this Sunday at 17:30
 
@@ -151,7 +134,7 @@ been updated, and it hopefully will be mergeable.
 ## Team Repository Setup (CAPTAIN)
 
 -    Create a github organization for your team, with an organization name of your choice
--    Fork the [lab starter repo](https://github.com/jim-parry/comp4711lab02) into that organization, using a repository name of your choice
+-    Fork the <span style="font-size:x-large">**[lab starter repo](https://github.com/jim-parry/dgpt4711-lab02)**</span> into that organization, using a repository name of your choice
 -    Create a new branch "develop", in your team repo 
 -    Make "develop" the default branch
 

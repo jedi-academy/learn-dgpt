@@ -15,80 +15,80 @@ Course organizer for Comp4711
     <week num="2">
         <topic>Collaborative Workflow</topic>
         <outcomes>3.1, 3.2</outcomes>
-<!--
         <lesson name="dev01" icon="dothis">Devops Workflow Concepts</lesson>
         <lab name="lab02">Collaborative Workflow</lab>
-        <lab name="lab02faq">Some lab notes</lab>
--->
+        <!--
+                <lab name="lab02faq">Some lab notes</lab>
+        -->
     </week>
     <week num="3">
         <topic>MVC Frameworks</topic>         
         <outcomes>1.1 (PHP), 1.2 (basics),3</outcomes>
-<!--
-        <lesson name="seminar03" icon="dothis">CodeIgniter Introduction</lesson>
-        <lab name="lab03">CodeIgniter Project Introduction</lab>
--->
+        <!--
+                <lesson name="seminar03" icon="dothis">CodeIgniter Introduction</lesson>
+                <lab name="lab03">CodeIgniter Project Introduction</lab>
+        -->
     </week>
     <week num="4">
         <topic>Controllers &amp; Routing</topic>         
         <outcomes>1.2 (routing), 3</outcomes>
-<!--
-        <lesson name="controllers" icon="dothis">CI Controllers</lesson>
-        <lesson name="routing">Routing</lesson>
-        <lab name="lab04">Working With Controllers &amp; Routing</lab>
--->
+        <!--
+                <lesson name="controllers" icon="dothis">CI Controllers</lesson>
+                <lesson name="routing">Routing</lesson>
+                <lab name="lab04">Working With Controllers &amp; Routing</lab>
+        -->
     </week>
     <week num="5">
         <topic>Responses</topic>
         <outcomes>1.2, 3</outcomes>
-<!--
-        <lesson name="responses">Building Responses</lesson>
-        <assignment name="assignment1">RESTish Backend</assignment>
--->
+        <!--
+                <lesson name="responses">Building Responses</lesson>
+                <assignment name="assignment1">RESTish Backend</assignment>
+        -->
     </week>
     <week num="6">
         <topic>Relational Models</topic>
         <outcomes>1.2 (models)</outcomes>
-<!--
-        <lesson name="models" >Models</lesson>
-        <lab name="lab05" >Models with Presenter</lab>
--->
+        <!--
+                <lesson name="models" >Models</lesson>
+                <lab name="lab05" >Models with Presenter</lab>
+        -->
     </week>
     <week num="7">
         <topic>Non-relational models</topic>
         <lesson name="documents" >Document Models</lesson>
-<!--
-        <tutorial name="mongodb">MongoDB</tutorial>
--->
+        <!--
+                <tutorial name="mongodb">MongoDB</tutorial>
+        -->
     </week>
     <week num="8">
         <topic>Representation Glue - XML &amp; JSON</topic>
-<!--
-        <lesson name="xml_json" >X M L &amp; J S O N</lesson>
-        <github name="xml" link="https://github.com/jedi-academy/example-xml">XML Examples</github>
-        <github name="example-simplexml" link="https://github.com/jedi-academy/example-simplexml-winter2016" >SimpleXML Examples</github>
-        <lab name="lab06">A Taste of XML</lab>
--->
+        <!--
+                <lesson name="xml_json" >X M L &amp; J S O N</lesson>
+                <github name="xml" link="https://github.com/jedi-academy/example-xml">XML Examples</github>
+                <github name="example-simplexml" link="https://github.com/jedi-academy/example-simplexml-winter2016" >SimpleXML Examples</github>
+                <lab name="lab06">A Taste of XML</lab>
+        -->
     </week>
     <week num="9">
         <topic>Transport Glue - HTTP</topic>
         <outcomes>2.1, 2.2</outcomes>
-<!--
-        <lesson name="net01" >Transport glue</lesson>
-        <lesson name="net02" icon="read">Traditional emitting HTTP requests</lesson>
-        <lesson name="net03">CodeIgniter 4 emitting HTTP requests</lesson>
-        <lab name="lab07">Transport glue</lab>
- -->
-   </week>
+        <!--
+               <lesson name="net01" >Transport glue</lesson>
+               <lesson name="net02" icon="read">Traditional emitting HTTP requests</lesson>
+               <lesson name="net03">CodeIgniter 4 emitting HTTP requests</lesson>
+               <lab name="lab07">Transport glue</lab>
+        -->
+    </week>
     <week num="10">
         <topic>Application Glue - REST</topic>
         <outcomes>2.1, 2.3</outcomes>
-<!--
-        <lesson name="advanced01" >Authentication</lesson>
-        <lesson name="advanced04" >Response Formatting</lesson>
-        <assignment name="assignment2">RESTful Backend</assignment>
- -->
-   </week>
+        <!--
+               <lesson name="advanced01" >Authentication</lesson>
+               <lesson name="advanced04" >Response Formatting</lesson>
+               <assignment name="assignment2">RESTful Backend</assignment>
+        -->
+    </week>
     <week num="12">
         <topic>Assignment Completion</topic>
         <outcomes>2.1, 2.3</outcomes>
@@ -102,24 +102,24 @@ Course organizer for Comp4711
         <lesson name="faq-apache" icon="read" >FAQ</lesson>		
         <lesson name="architecture" >Webapp Architectures</lesson>
         <lesson name="rest" >REST Philosophy</lesson>
-<!--
-        <lesson name="intro02" icon="read" >Golden Rules</lesson>
-        <tutorial name="setup03">PHP Comparison to Java</tutorial>
         <lesson name="dev03" icon="read">Gitflow Setup Example</lesson>
-        <lesson name="dev04" icon="read" >Gitting Good - Best Practices</lesson>		
-        <lesson name="xml04"  icon="read">Converting between XML and JSON</lesson>
--->
+        <!--
+                <lesson name="intro02" icon="read" >Golden Rules</lesson>
+                <tutorial name="setup03">PHP Comparison to Java</tutorial>
+                 <lesson name="dev04" icon="read" >Gitting Good - Best Practices</lesson>		
+                <lesson name="xml04"  icon="read">Converting between XML and JSON</lesson>
+        -->
     </week>
     <week num="yy">
         <topic>Other Frameworks (FYI)</topic>
-<!--
-        <lesson name="basic01-other" icon="read" >Other MVC Framework Examples</lesson>
-        <lesson name="other-controllers" icon="read" >Controller examples from other frameworks</lesson>
-        <lesson name="other-routing" icon="read">Routing examples from  other frameworks</lesson>
-        <lesson name="other-rest" icon="read" >REST examples from  other frameworks</lesson> 
-        <lesson name="other-models" icon="read" >Model examples from  other frameworks</lesson>
-        <lesson name="other-views" icon="read" >View examples from  other frameworks</lesson>
-        <lesson name="other-forms" icon="read" >Form examples from  other frameworks</lesson> 
- -->
+        <!--
+               <lesson name="basic01-other" icon="read" >Other MVC Framework Examples</lesson>
+               <lesson name="other-controllers" icon="read" >Controller examples from other frameworks</lesson>
+               <lesson name="other-routing" icon="read">Routing examples from  other frameworks</lesson>
+               <lesson name="other-rest" icon="read" >REST examples from  other frameworks</lesson> 
+               <lesson name="other-models" icon="read" >Model examples from  other frameworks</lesson>
+               <lesson name="other-views" icon="read" >View examples from  other frameworks</lesson>
+               <lesson name="other-forms" icon="read" >Form examples from  other frameworks</lesson> 
+        -->
     </week>
 </organizer>
