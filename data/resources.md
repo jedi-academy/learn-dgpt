@@ -4,6 +4,7 @@
 - [Forum](https://forum.codeigniter.com/)
 - [Slack channel](https://codeigniterchat.slack.com/) ... [signup for it](http://codeignitersignup.ciblox.com/)
 - [CodeIgniter China](https://codeigniter.org.cn/)
+- [CodeIgniter 4 User Guide, Chinese](https://codeigniter-chinese.github.io/codeigniter4-user-guide/) ... not quite uptodate, but could be handy!
 
 ## Editor
 - [NetBeans 10](https://netbeans.apache.org/download/nb100/nb100.html) ... version 11 is ok too
