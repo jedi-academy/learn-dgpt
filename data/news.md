@@ -13,3 +13,7 @@ I have put together a presentation with more workflow details, to go over in cla
 
 ## Week 4 - Sept 23
 
+Meet the framework we will be using, CodeIgniter 4.
+
+We have a introduction presentation for it, and then
+you will be completing the CodeIgniter 4 tutorial in lab.
