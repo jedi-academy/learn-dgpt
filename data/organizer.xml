@@ -30,10 +30,8 @@ Course organizer for Comp4711
     <week num="3">
         <topic>MVC Frameworks</topic>         
         <outcomes>1.1 (PHP), 1.2 (basics),3</outcomes>
-        <!--
-                <lesson name="seminar03" icon="dothis">CodeIgniter Introduction</lesson>
-                <lab name="lab03">CodeIgniter Project Introduction</lab>
-        -->
+        <lesson name="basic01">Framework Introduction</lesson>
+        <lab name="lab03">CodeIgniter Turotial</lab>
     </week>
     <week num="4">
         <topic>Controllers &amp; Routing</topic>         
@@ -109,23 +107,12 @@ Course organizer for Comp4711
         <lesson name="architecture" >Webapp Architectures</lesson>
         <lesson name="rest" >REST Philosophy</lesson>
         <lesson name="dev03" icon="read">Gitflow Setup Example</lesson>
-        <!--
+        <tutorial name="setup03">PHP Comparison to Java</tutorial>
+       <!--
                 <lesson name="intro02" icon="read" >Golden Rules</lesson>
-                <tutorial name="setup03">PHP Comparison to Java</tutorial>
                  <lesson name="dev04" icon="read" >Gitting Good - Best Practices</lesson>		
                 <lesson name="xml04"  icon="read">Converting between XML and JSON</lesson>
         -->
     </week>
-    <week num="yy">
-        <topic>Other Frameworks (FYI)</topic>
-        <!--
-               <lesson name="basic01-other" icon="read" >Other MVC Framework Examples</lesson>
-               <lesson name="other-controllers" icon="read" >Controller examples from other frameworks</lesson>
-               <lesson name="other-routing" icon="read">Routing examples from  other frameworks</lesson>
-               <lesson name="other-rest" icon="read" >REST examples from  other frameworks</lesson> 
-               <lesson name="other-models" icon="read" >Model examples from  other frameworks</lesson>
-               <lesson name="other-views" icon="read" >View examples from  other frameworks</lesson>
-               <lesson name="other-forms" icon="read" >Form examples from  other frameworks</lesson> 
-        -->
-    </week>
+
 </organizer>

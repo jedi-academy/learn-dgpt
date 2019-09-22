@@ -1,95 +1,67 @@
 # Lab #3 - Framework Introduction
-COMP4711 - BCIT - Winter 2019
+COMP4711 - BCIT/DGPT - Fall 2019
 
 ## Lab Goals
 
 This week, you will meet CodeIgniter4.
 
-## Lab Process
+This is an individual lab, with each student ending up with their own repository.
 
-This is a team lab, sharing a single team repository, but with each team member using 
-their own repository forked from it.
-
-Team members will each one of two roles to play:
-- One member will be the creator and maintainer of the team repo - he/she will be designated the CAPTAIN
-- The other members of the team will be contributors
-- If a team has fewer than four members, then the captain will also be a contributor
-
-The CAPTAIN role should be held by someone other than the team member who
-had the role last week.
 
 ## Lab Submission
 
-Your lab will result in a github repository for your team, as well as one for each team
-member.
-
 Submit a readme *text* file, or a submission comment, to the lab dropbox. 
-It should contain a link to your **team**'s github repository. 
-I can find the team member repositories through it.
+It should contain a link to your github repository. 
 
 Due: this Sunday at 17:30
-
-## Lab Marking Guideline
 
 A marking rubric will be attached to the lab 3 dropboxes.
 
 
-# Lab Prep
+# The Lab
 
-## Member Prep (ALL)
+Make a github repository to use for this lab, `comp4711lab03`, in your account.  
+This won't be a shared repository, but one used exclusively by you.
+We will return to shared repos, and gitflow workflow, with the assignments. 
+Because it is not shared, you can work on the `master` branch.
 
--   You have xAMP in place
--   You have virtual hosts in place
--   You have git installed
--   You have GPG signing configured
+You will need to use your XAMPP setup from week 1, or else install [PHP7.2](https://www.php.net/) on your system.
 
+Additionally, you will need the [Composer](https://getcomposer.org/) program.
 
-## Team Repository Setup (CAPTAIN)
+Install CodeIgniter4 on your system using the [appstarter](https://codeigniter4.github.io/userguide/installation/installing_composer.html#app-starter).
+I suggest the following command, inside the `htdocs` folder of your XAMPP/apache2:
 
--   Create a github organization for your team, with an organization name of your choice
--   Create a new team repo inside that organization, for this lab; don't worry about a readme
--   Create your starter project locally
+    composer create-project codeigniter4/appstarter comp4711lab03 -s rc
 
-        composer create-project codeigniter4/devstarter -s dev
+You can "run" your webapp by mapping `comp4711.local` to have `comp4711lab03/public` as its document root,
+and then viewing `comp4711.local` in your browser, using the port you configured Apache to run on.
 
--   Configure the project so that the git remote "origin" refers to your team repo
--   Update the readme appropriately
--   Change the `$baseURL` setting in app/Config/App.php to reflect your team choice
--   Push the repo
+Alternately, once the framework has been installed, you can run the webapp from the command line, inside
+the project folder, with 
 
-        git push origin master
+    php spark serve --port=XXXX
 
--   On github.com, create a develop branch from master, and make it the default
+where XXXX is the port you want to use. 
+You would then access the in your browser with `localhost:XXXX`.
 
-## Member Repository Setup (All)
+Associate this project folder with your github repository:
 
--   Fork the team repository to your personal github account (including the CAPTAIN)
--   Clone your repository locally, using a name/location of your choice.
+    cd comp4711lab03
+    git init
+    git remote add origin YOUR-GITHUB-PROJECT-CLONING-URL
+    git add .
+    git commit -S -m "Setup project"
+    git push origin master
 
-        git clone [YOUR repo's cloning URL] YOUR_PROJECT_FOLDER
+**Remember to add & commit your local changes at the end of each of the three pages in the tutorial.**
 
--    If supported by your IDE, "git ignore" your IDE's metadata folder, so you don't inflict it on your teammates.
--    Make sure you have a virtual domain mapped to the project
--   Make sure you can run the project
+Complete the [CodeIgniter4 Tutorial](https://codeigniter4.github.io/userguide/tutorial/index.html) in the user guide.
 
-## The Captain's Job
+Modify the news view so that the title shows your name, eg "Jim's News archive" instead of just "News archive".
 
-Apart from moderating PRs, you should modify the default view so that
-it presents an unordered list of links to contributor's contributions
+Add, commit & push the completed project.
 
-        <a href="/welcome/matex">Mate X</a>
-
-## Contributors' Job
-
-- Add a method, `matex()`, to the Home controller. It should render the `matex` view
-    (or whatever you choose to call it)
--   Add a `matex` view, with a (tasteful) body of your choice
-
-## Gitflow!
-
-When done, your "app" will show a list of member links, each of which results
-in a different view.
-
-# Conclusion
-
-That's all, folks!
+**Note**: there is a Chinese translation of the user guide, but the 
+[tutorial section](https://codeigniter-chinese.github.io/codeigniter4-user-guide/tutorial/index.html#) looks like
+an earlier version of the tutorial, and it isn't exactly the same as the "official" one in English.

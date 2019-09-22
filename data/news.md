@@ -10,3 +10,6 @@ to relevant pages inside D2L.
 We want to complete lab 2 this week!
 
 I have put together a presentation with more workflow details, to go over in class.
+
+## Week 4 - Sept 23
+
