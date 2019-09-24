@@ -31,12 +31,38 @@ On github, fork the [lab 3 starter project](https://github.com/jedi-academy/dgpt
 
 You will need to use your XAMPP setup from week 1, or else install [PHP7.2](https://www.php.net/) on your system.
 
+### Composer Update (Do this)
+
+Composer will not run successfully in lab - one or more of the repositories it
+tries to access are blocked by the firewall.
+If you are in a situation where you can successfully run Composer, then skip to
+the next section.
+
+Otherwise...
+
+I have made a [supplementary repo](https://github.com/jedi-academy/dgpt-vendor) for you,
+with the repo's `vendor` folder contents after a Composer update.
+
+Clone it locally:
+
+    git clone https://github.com/jedi-academy/dgpt-vendor.git
+
+and then copy the `dgt-vendor` folder's contents into your `dgpt4711lab03`
+project. The only conflict doing this should be that the `vendor` folder already exists,
+and you can overwrite it.
+
+After incorporating this supplementary update, skip to "Running your app" below.
+
+### If you can run Composer... (or do this)
+
 Additionally, you will need the [Composer](https://getcomposer.org/) program.
 
 The starter project has CodeIgniter 4 installed, but you will need to update
 the dependencies once you clone it locally:
 
     composer update
+
+### Running Your App
 
 You can "run" your webapp by mapping `comp4711.local` to have `comp4711lab03/public` as its document root,
 and then viewing `comp4711.local` in your browser, using the port you configured Apache to run on.
