@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<lesson status="v3.0">
+<lesson status="v3.1">
 
     <slide title="Routing" layout="normal">
         <p>Routing is the <b>process</b> of determining how to handle an incoming
@@ -46,124 +46,7 @@
     </slide>
 
 
-    <slide title="Apache View of URIs" layout="normal" >
-        <p>Apache needs to know either what to return for a request
-            (eg. the contents of a named file) or what object to
-            execute in response to a request (eg. index.php).
-        </p>
-        <table>
-            <tr>
-                <th>URI</th>
-                <th>Object</th>
-            </tr>
-            <tr>
-                <td>
-                    <code>/stuff</code>
-                </td>
-                <td>The file "stuff" in the document root</td>
-            </tr>
-            <tr>
-                <td>
-                    <code>/stuff</code> with "index.php" injected</td>
-                <td>The "index.php" script in the document root</td>
-            </tr>
-            <tr>
-                <td>
-                    <code>/index.php/stuff</code>
-                </td>
-                <td>The "index.php" script in the document root</td>
-            </tr>
-            <tr>
-                <td>
-                    <code>/index.php?c=stuff</code>
-                </td>
-                <td>The "index.php" script in the document root</td>
-            </tr>
-        </table>
-        <p>If the file or object is not found, Apache returns a 404.</p>
-        <p>With an appropriate <code>.htaccess</code>, the "index.php"
-            can be hidden from your users, yet Apache still does the right thing.</p>
-    </slide>
-
-    <slide title="CodeIgniter View of URIs" layout="normal"  tag="tag1">
-        <p>CodeIgniter needs to know which controller and method to
-            execute in response to a request (eg. Stuff::hithere.php).
-        </p>
-        <table>
-            <tr>
-                <th>URI</th>
-                <th>Object</th>
-            </tr>
-            <tr>
-                <td>
-                    <code>/stuff</code>
-                </td>
-                <td>If the file "stuff" exists in the document root,
-                    Apache handles the request.</td>
-            </tr>
-            <tr>
-                <td>
-                    <code>/stuff</code> with "index.php" injected</td>
-                <td>Invoke the "index" method of the "Stuff" controller.</td>
-            </tr>
-            <tr>
-                <td>
-                    <code>/index.php/stuff</code>
-                </td>
-                <td>Invoke the "index" method of "Stuff" controller.</td>
-            </tr>
-            <tr>
-                <td>
-                    <code>/index.php?c=stuff</code>
-                </td>
-                <td>Invoke the "index" method of "Stuff" controller.
-                    This assumes proper configuration.</td>
-            </tr>
-        </table>
-
-    </slide>
-
-    <slide title="SEO View of URIs" layout="normal"  tag="tag1">
-        <p>Search engines need to know the "resource" to
-            associate with a request
-        </p>
-        <table>
-            <tr>
-                <th>URI</th>
-                <th>Object</th>
-            </tr>
-            <tr>
-                <td>
-                    <code>/stuff</code>
-                </td>
-                <td>"stuff"</td>
-            </tr>
-            <tr>
-                <td>
-                    <code>/stuff</code> with "index.php" injected</td>
-                <td>"stuff"</td>
-            </tr>
-            <tr>
-                <td>
-                    <code>/index.php/stuff</code>
-                </td>
-                <td>index.php.stuff</td>
-            </tr>
-            <tr>
-                <td>
-                    <code>/index.php?c=stuff</code>
-                </td>
-                <td>index.php</td>
-            </tr>
-        </table>
-        <p>If the request returns a 404, the search engine will treat
-            the content as unavailable.</p>
-        <p>Only if you hide "index.php" or provide appropriate
-            routing, will SEO engines associate the correct
-            "resource" with your content.</p>
-    </slide>
-
-    <slide title="2. CodeIgniter Routing" layout="normal" tag="tag2">
+   <slide title="2. CodeIgniter Routing" layout="normal" tag="tag2">
         <p>To do routing, CodeIgniter...</p>
         <ol>
             <li>splits the URI into segments</li>

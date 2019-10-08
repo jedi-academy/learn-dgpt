@@ -1,52 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<lesson status="v2.0">
-    <!-- Activity metadata ... override anything from the course or organizer -->
-
-    <!-- Agenda -->
-    <slide title="Agenda" layout="normal">
-        <ol>
-            <li>
-                <a href="#{tag1}">Overview</a>
-            </li>
-            <li>
-                <a href="#{tag2}">Controller Basics</a>
-            </li>
-            <li>
-                <a href="#{tag3}">Getting Input</a>
-            </li>
-            <li>
-                <a href="#{tag4}">Using Stuff</a>
-            </li>
-        </ol>
-    </slide>
-
-
-    <!-- Normal slides -->
+<lesson status="v2.1">
 
     <slide title="1. Overview" layout="normal" tag="tag1">
         <p>Controllers are a key component of the MVC design pattern.</p>
+        <p>A controller's job is to handle an incoming request, and produce an 
+            appropriate response.</p>
         <p>CodeIgniter controllers are normally found in the 
             <code>app/Controllers</code> folder.</p>
+            <p>In the CodeIgniter tutorial last week, you saw the
+            <code>Pages</code> and <code>News</code> controllers.</p>
     </slide>
 
-    <slide title="Remember REST?" layout="normal">
-        <div>
-            <p>REST is an architectural style or philosophy, not a standard.</p>
-            <ul>
-                <li>Map resources (not usecases) to URLs</li>
-                <li>Map CRUD usecases to HTTP types</li>
-                <li>Pass all needed data (representational state)</li>
-                <li>Accept or deliver multiple formats (XML, JSON, JSONP, CSV, XHTML, text)</li>
-            </ul>
-            <p>"Routing" maps these to a single controller for each resource,
-                with specified methods, and with resource identifiers
-                as method parameters.</p>
-        </div>    
-    </slide>
-
+    <!--    <slide title="Remember REST?" layout="normal">
+            <div>
+                <p>REST is an architectural style or philosophy, not a standard.</p>
+                <ul>
+                    <li>Map resources (not usecases) to URLs</li>
+                    <li>Map CRUD usecases to HTTP types</li>
+                    <li>Pass all needed data (representational state)</li>
+                    <li>Accept or deliver multiple formats (XML, JSON, JSONP, CSV, XHTML, text)</li>
+                </ul>
+                <p>"Routing" maps these to a single controller for each resource,
+                    with specified methods, and with resource identifiers
+                    as method parameters.</p>
+            </div>    
+        </slide>
+    -->
     <slide title="Key Controller Abstractions" layout="normal">
         <div class="left">
-            <p>The key abstractions for CI controllers:</p>
             <ul>
                 <li>its <a href="https://codeigniter4.github.io/CodeIgniter4/incoming/request.html" target="_blank">request</a> property encapsulates an HTTP request</li>
                 <li>its <a href="https://codeigniter4.github.io/CodeIgniter4/outgoing/response.html" target="_blank">response</a> property encapsulates an HTTP response</li>
@@ -65,7 +46,6 @@
 
     <slide title="Types of Controllers" layout="normal">
         <div class="left">
-            <p>There are three common types of controllers:</p>
             <ul>
                 <li>A <b>normal</b> or "regular" controller is expected to return a webpage
                     to the browser.</li>
@@ -74,8 +54,6 @@
                 <li>A <b>service</b> controller is expected to implement the
                     server side of some distributed system protocol (eg. REST).</li>
             </ul>
-            <p>Many service controllers are RESTful, but not all.
-                An API service controller, for instance, often only handles GET and POST requests.</p>
         </div>
         <div class="right">
             <br/>
@@ -84,58 +62,56 @@
     </slide>
 
     <slide title="2. Controller Basics" layout="normal" tag="tag2">
-        <div class="left">
-            <p>Controllers are found in the <code>app/Controllers</code> folder.
-                Controllers can also be in nested subfolders underneath that.</p>
-            <p>There is a default controller, <code>Home</code>, in any folder.
-                This default can be changed, if you like.</p>
-        </div>
-        <div class="right">
-            <p>A controller is referenced by its lower-case name.
-                The URL <code>comp4711.local/product</code> is a reference
-                to the <code>Product</code> controller.</p>
-            <p>If that same controller were in a subfolder, 
-                <code>app/Controllers/inventory</code>, then
-                it would referenced in a URL as <code>comp4711.local/inventory/product</code>.
-            </p>
-            <p>If "orders" was a subfolder, then the URL 
-                <code>comp4711.local/orders</code> would be a reference
-                to the <code>app/Controllers/orders/Home</code> controller.
-            </p>
-        </div>
+        <p>Controllers are found in the <code>app/Controllers</code> folder.
+            Controllers can also be in nested subfolders underneath that.</p>
+        <p>There is a default controller, <code>Home</code>, in any folder.
+            This default can be changed, if you like.</p>
+    </slide>
+
+    <slide title="Controllers in Subfolders" layout="normal">
+        <p>A controller is referenced by its lower-case name.
+            The URL <code>comp4711.local/product</code> is a reference
+            to the <code>Product</code> controller.</p>
+        <p>If that same controller were in a subfolder, 
+            <code>app/Controllers/inventory</code>, then
+            it would referenced in a URL as <code>comp4711.local/inventory/product</code>.
+        </p>
+        <p>If "orders" was a subfolder, then the URL 
+            <code>comp4711.local/orders</code> would be a reference
+            to the <code>app/Controllers/orders/Home</code> controller.
+        </p>
     </slide>
 
     <slide title="Segment Based Naming" layout="normal">
-        <div class="left">
-            <p>URLs are segment based.</p>
-            <p>For instance, the URL <code>example.com/class/function/parm1/parm2</code>
-                is meant to be interpreted as a reference to the <code>function</code>
-                method inside the <code>class</code> controller, with two positional
-                parameters, <code>parm1</code> and <code>parm2</code>,
-                passed to the method invocation.</p>
-            <p>You can't normally pass parameters to a controller's <code>index</code>
-                method. It is *possible* to do so, with some clever routing rules,
-                but that is beyond our scope.</p>
-        </div>
-        <div class="right">
-            <p>You need to be careful with your selection of controller class
-                and method names, or the handling of a request by CodeIgniter
-                might not be what you expect!</p>
-            <p>For example, the URL <code>/apple/banana/pear</code> *could*
-                be resolved by any of the following:
-                <ul>
-                    <li>
-                        <code>Apple::banana(pear)</code> or</li>
-                    <li>
-                        <code>apple/Banana::pear()</code> or</li>
-                    <li>
-                        <code>apple/banana/Pear::index()</code> or</li>
-                    <li>
-                        <code>apple/banana/pear/Home::index()</code> 
-                    </li>
-                </ul>
-            </p>
-        </div>
+        <p>URLs are segment based.</p>
+        <p>For instance, the URL <code>example.com/class/function/parm1/parm2</code>
+            is meant to be interpreted as a reference to the <code>function</code>
+            method inside the <code>class</code> controller, with two positional
+            parameters, <code>parm1</code> and <code>parm2</code>,
+            passed to the method invocation.</p>
+        <p>You can't normally pass parameters to a controller's <code>index</code>
+            method. It is *possible* to do so, with some clever routing rules,
+            but that is beyond our scope.</p>
+    </slide>
+
+    <slide title="Naming Cautions" layout="normal">
+        <p>You need to be careful with your selection of controller class
+            and method names, or the handling of a request by CodeIgniter
+            might not be what you expect!</p>
+        <p>For example, the URL <code>/apple/banana/pear</code> *could*
+            be resolved by any of the following:
+            <ul>
+                <li>
+                    <code>Apple::banana(pear)</code> or</li>
+                <li>
+                    <code>apple/Banana::pear()</code> or</li>
+                <li>
+                    <code>apple/banana/Pear::index()</code> or</li>
+                <li>
+                    <code>apple/banana/pear/Home::index()</code> 
+                </li>
+            </ul>
+        </p>
     </slide>
 
     <slide title="3. Getting Input" layout="normal" tag="tag3">
@@ -160,6 +136,7 @@
             by using <a href="https://codeigniter4.github.io/CodeIgniter4/incoming/incomingrequest.html#retrieving-input"
                         target="_blank">request</a> methods.
         </p>
+        <p>This is a topic for later in the course.</p>
         <p>Note that fields are referenced according to their "name" 
             attribute, and not their "id" attribute.</p>
             

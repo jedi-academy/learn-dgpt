@@ -36,11 +36,9 @@ Course organizer for Comp4711
     <week num="4">
         <topic>Controllers &amp; Routing</topic>         
         <outcomes>1.2 (routing), 3</outcomes>
-        <!--
-                <lesson name="controllers" icon="dothis">CI Controllers</lesson>
-                <lesson name="routing">Routing</lesson>
-                <lab name="lab04">Working With Controllers &amp; Routing</lab>
-        -->
+        <lesson name="controllers" icon="dothis">CI Controllers</lesson>
+        <lesson name="routing">Routing</lesson>
+        <lab name="lab04">Working With Controllers &amp; Routing</lab>
     </week>
     <week num="5">
         <topic>Responses</topic>
@@ -108,7 +106,7 @@ Course organizer for Comp4711
         <lesson name="rest" >REST Philosophy</lesson>
         <lesson name="dev03" icon="read">Gitflow Setup Example</lesson>
         <tutorial name="setup03">PHP Comparison to Java</tutorial>
-       <!--
+        <!--
                 <lesson name="intro02" icon="read" >Golden Rules</lesson>
                  <lesson name="dev04" icon="read" >Gitting Good - Best Practices</lesson>		
                 <lesson name="xml04"  icon="read">Converting between XML and JSON</lesson>
