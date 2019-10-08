@@ -39,7 +39,8 @@ Course organizer for Comp4711
         <lesson name="controllers" icon="dothis">CI Controllers</lesson>
         <lesson name="routing">Routing</lesson>
         <lab name="lab04">Working With Controllers &amp; Routing</lab>
-    </week>
+                <assignment name="assignment1">Heroes: the Beginning</assignment>
+   </week>
     <week num="5">
         <topic>Responses</topic>
         <outcomes>1.2, 3</outcomes>
@@ -58,8 +59,8 @@ Course organizer for Comp4711
     </week>
     <week num="7">
         <topic>Non-relational models</topic>
-        <lesson name="documents" >Document Models</lesson>
-        <!--
+         <!--       <lesson name="documents" >Document Models</lesson>
+
                 <tutorial name="mongodb">MongoDB</tutorial>
         -->
     </week>

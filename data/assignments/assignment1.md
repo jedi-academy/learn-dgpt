@@ -1,59 +1,71 @@
-# Assignment #1 - RESTish Backend
-COMP4711 - BCIT - Winter 2019
+# Assignment #1 - Heroes: the Beginning
+COMP4711 - BCIT/DGPT - Fall 2019
 
 ## Assignments Overview
 
 The purpose of the assignments, collectively, is to have you apply the techniques 
-from the lessons and tutorials, in a context that will be helpful to you
-when you build your project next term.
+from the lessons and tutorials.Each will add more capabilities to the previous.
 
-In your option project teams (of three to five), you will be building a small 
-but complete RESTful backend webapp. 
+Based on our earlier experience with team work, this will be individual
+contributions to a shared webapp.
 
-This will be done in three stages, with specific expectations for each stage. 
-Each assignment will build on the previous one.
-
-You are free to use the programming language and framework of your choice to implement
-these, bearing in mind that assistance for non-CodeIgniter projects will
-be spotty, and you may have to explain how your project achieves the assignment goals.
+Each student will have a category (a competitive sport or performing art),
+in which they profile six of their heroes. Choose a category that you
+are familiar with, and have some personal heroes for. Everyone will
+have a unique category.
 
 ## Goals for This Assignment
 
-The purpose of this assignment #1 is to get the basic pieces of your backend
-webapp in place, properly routed. 
+Each student, for their category, will create a mock model for their heores
+data; a controller to present the model data as a table, or to show
+the data for a designated hero; and the view templates to support these.
 
+This should sound **very similar** to lab 4!
 
-## Recipe
+## Workflow
 
-Here is a checklist for completing the assignment:
+We will use collaborative gitflow for this.
 
-- Setup your team
-    - captain, mates, D2L group, team repo, readme with team agreement
-- Plan your project
-    - one or two plausible resources, one or two plausible API usecases/groups
-- Build mock models for your resources, with non-trivial data 
-    (4-8 fields per record, 6-12 records in all)
-- For each resource, have a resource routing to a resource controller...
-    - which uses the equivalent of the API response trait
-    - only has to handle the index() and show() methods properly
-    - data to come from your model(s)
-    - other resource methods to return suitable failures
-- For each API endpoint, identify and implement several plausible methods
-    - make sure to cover GET and POST between them
-    - the controllers should use the equivalent of the API response trait
-    - you can provide plausible but bogus responses
-- Make it testable
-    - a way to invoke each endpoint & behaviour, and see the response
-    - could be Javascript & AJAX; could be forms submitted
-    - doesn't have to be home or landing page, but could be
-- Follow good gitflow workflow
-- Cleanup
-    - readme, changelog?, commented code!, cruft gone, all synched
+I will provide a [team repository](https://github.com/jedi-academy/dgptheroes), with master and develop branches.
+At the moment, it is only a shell, and I will update it as we go. You can fork it,
+and then synchronize with it while working on the assignment.
+
+You will fork that, and prepare your work locally with feature branches
+based on develop. Your work will get integrated through pull requests,
+to merge one of your feature branches with the team's develop branch.
+All of your commits are to be GPG-signed.
+
+## Allowed Folders to Use
+
+Each of you will have subfolders in `App/Controllers`, `App/Models` and `App/Views`; named
+after your category. That is where your work should go.
+For instance, the "baking" category would have its models inside `app/Models/baking/`.
+
+There will be some common configuration data in `app/Config/App.php`,
+and you may need to add a configuration file for subsequent assignments;
+we shall see.
+
+Additionally, and public files, such as images, should go into
+`public/images/xxx`, where xxx is your category name.
+You should also put there a 100x100 PNG icon, named after your category.
+
+## Your Category Data
+
+Your mock data should include at least eight fields:
+
+- an identifier
+- the name of your hero
+- the city or country your hero lives in
+- the name of a 240x360 image of them
+
+and then four additional fields that are relevant to your category
+and different from other categories (eg team, position, specialty,
+favorite food, ???). At least two of these fields must be different
+from everyone else's.
 
 ## Assignment submission
 
-Submit a link to your team repo for this project, to the dropbox.
+Submit a note to the assignment dropbox, with your github username and
+assigned category.
 
-It will have a rubric attached.
-
-Due date: Sunday, Feb 10, 23:30
+Due date: Sunday, Oct 20, 17:30
