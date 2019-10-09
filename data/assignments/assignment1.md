@@ -14,6 +14,19 @@ in which they profile six of their heroes. Choose a category that you
 are familiar with, and have some personal heroes for. Everyone will
 have a unique category.
 
+## Categories
+
+
+- Zhenhua - (video game) creators
+- Weida - hiphop
+- Mingxi - Crossfire players
+- Bincong - movie stars
+- Li - Asian historical heroes
+- Wozhao - Chinese TV stars
+- Chengyue - football
+- Hao Gong - Chinese anime stars
+- Yingzheng -  basketball
+
 ## Goals for This Assignment
 
 Each student, for their category, will create a mock model for their heores
