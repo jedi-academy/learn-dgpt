@@ -201,7 +201,7 @@ and then return the JSON-encoded string version of it.
            // connect to the model
            $places = new \App\Models\Places();
            // retrieve all the records
-           $record = $places->find($id);
+           $records = $places->findAll();
            // JSON encode and return the result
            return json_encode($records);
         }
