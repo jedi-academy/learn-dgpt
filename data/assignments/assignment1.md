@@ -30,6 +30,17 @@ I will provide a [team repository](https://github.com/jedi-academy/dgptheroes), 
 At the moment, it is only a shell, and I will update it as we go. You can fork it,
 and then synchronize with it while working on the assignment.
 
+Once you have forked and cloned the team repository, add the remote alias
+like I had you do in lab 4:
+
+    git remote add upstream https://github.com/jedi-academy/dgpt4711lab04.git
+
+You will periodically need to synch with the team repo, so see
+recent merges and any updates.
+
+    git checkout develop
+    git pull upstream develop
+
 You will fork that, and prepare your work locally with feature branches
 based on develop. Your work will get integrated through pull requests,
 to merge one of your feature branches with the team's develop branch.
