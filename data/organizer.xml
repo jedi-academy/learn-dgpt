@@ -21,47 +21,47 @@ Course organizer for Comp4711
                 <lab name="lab02faq">Some lab notes</lab>
         -->
     </week>
-    <week num="2b">
+    <week num="3">
         <topic>Collaborative Workflow</topic>
         <outcomes>3.1, 3.2</outcomes>
         <lesson name="flow" icon="dothis">Devops Workflow Details</lesson>
         <lab name="lab02">Collaborative Workflow</lab>
     </week>
-    <week num="3">
+    <week num="4">
         <topic>MVC Frameworks</topic>         
         <outcomes>1.1 (PHP), 1.2 (basics),3</outcomes>
         <lesson name="basic01">Framework Introduction</lesson>
         <lab name="lab03">CodeIgniter Turotial</lab>
     </week>
-    <week num="4">
+    <week num="5">
         <topic>Controllers &amp; Routing</topic>         
         <outcomes>1.2 (routing), 3</outcomes>
         <lesson name="controllers" icon="dothis">CI Controllers</lesson>
         <lesson name="routing">Routing</lesson>
         <lab name="lab04">Working With Controllers &amp; Routing</lab>
-                <assignment name="assignment1">Heroes: the Beginning</assignment>
-   </week>
-    <week num="5">
+        <assignment name="assignment1">Heroes: the Beginning</assignment>
+    </week>
+    <week num="6">
+        <topic>Relational Models</topic>
+        <outcomes>1.2 (models)</outcomes>
+        <lesson name="models" >Models</lesson>
+       <lesson name="modeling" icon="read" >Modeling resources</lesson>
+        <assignment name="assignment1">Heroes: the Beginning</assignment>
+    </week>
+    <week num="7">
+        <topic>Non-relational models</topic>
+        <!--       <lesson name="documents" >Document Models</lesson>
+               <lab name="lab05" >Models with Presenter</lab>
+ 
+                <tutorial name="mongodb">MongoDB</tutorial>
+        -->
+    </week>
+    <week num="8">
         <topic>Responses</topic>
         <outcomes>1.2, 3</outcomes>
         <!--
                 <lesson name="responses">Building Responses</lesson>
                 <assignment name="assignment1">RESTish Backend</assignment>
-        -->
-    </week>
-    <week num="6">
-        <topic>Relational Models</topic>
-        <outcomes>1.2 (models)</outcomes>
-        <!--
-                <lesson name="models" >Models</lesson>
-                <lab name="lab05" >Models with Presenter</lab>
-        -->
-    </week>
-    <week num="7">
-        <topic>Non-relational models</topic>
-         <!--       <lesson name="documents" >Document Models</lesson>
-
-                <tutorial name="mongodb">MongoDB</tutorial>
         -->
     </week>
     <week num="8">

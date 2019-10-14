@@ -29,3 +29,10 @@ and added a note to it.
 Tuesday, I would like to spend the first half completing lab 4,
 and the second half of the lab getting you started on
 Assignment 1.
+
+## Week 6 - Oct 15
+
+We will take a quick look at models in CodeIgniter 4, but will spend
+most of our time helping you complete Assignment 1.
+
+The "Building responses" topic moves to week 8.

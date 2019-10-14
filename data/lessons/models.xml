@@ -1,361 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<lesson status="v1.1">
+<lesson status="v2">
 
-    <!-- Agenda -->
-    <slide title="Agenda" layout="normal">
-        <ol>
-            <li>
-                <a href="#{tag3}">CodeIgniter Models</a>
-            </li>
-            <li>
-                <a href="#{tag5}">Object Relational Mapping</a>
-            </li>
-            <li>
-                <a href="#{tag6}">Database Utilities</a>
-            </li>
-            <li>
-                <a href="#{tag7}">Model Conventions</a>
-            </li>
-            <li>
-                <a href="#{tag8}">Database Configuration</a>
-            </li>
-        </ol>
+    <slide title="Database SUpport" layout="normal" tag="tag1">
+        <p>The Database module in CodeIgniter is the largest module
+            in the framework, making up roughly 20% of the codebase.</p>
+        <p>It is built around a Relational Database Management
+            view of data.</p>
+        <p>In it, CodeIgniter provides three levels of database
+            abstraction: drivers, the query builder, and models.</p>            
     </slide>
 
-    <slide title="1. CODEIGNITER MODELS" layout="normal" tag="tag3">
-        <p>CodeIgniter leans more to the data access layer flavor of model,
-            rather than the entity flavor of model.</p>
-			<p>A "data access layer" model is understood to represent
-			a collection of "entity" models.</p>
-        <p>
-            <a href="http://www.codeigniter.com/userguide3/general/models.html" target="_blank">
-                Models in CodeIgniter</a> are found in the <code>application/models</code>
-            folder.</p>
-        <p>The model class name should have the first letter capitalized,
-            and the filename should match that. You can get away with breaking
-            this rule on Windows, but your webapp will break on Linux
-            (the model's source file will not be found).</p>
+    <slide title="Database Drivers" layout="normal">
+        <p>The database drivers make up the lowest level of support
+            for databases. They provide for connecting to a database,
+            executing SQL queries, and getting result sets back.</p>
+        <p>The driver classes provide an RDB-neutral API, with handlers
+            for MYSQL, Postgres, and SQLite3.</p>
+        <p>A sample code extract:
+        <pre>
+    $db = \Config\Database::connect();
+    $query = $db->query('SELECT name, title, email FROM my_table');
+    $results = $query->getResult();
+        </pre></p>
+    </slide>
+    
+    <slide title="The Query Builder" layout="normal">
+        <p>The Query Builder provides an O-O way to build and
+            execute database queries.</p>
+        <p>A sample code extract:
+        <pre>
+    $db      = \Config\Database::connect();
+    $builder = $db->table('users');
+    $query = $builder->select('title')
+    ->where('id', $id)
+    ->limit(10, 20)
+    ->get();
+        </pre></p>
     </slide>
 
-    <slide title="CI_Model" layout="normal" tag="tag3">
-        <p>Each model should extend <code>CI_Model</code>, or your base model
-            if you use one.</p>
-        <p>Models need to be loaded before use. This can be done explicitly,
-            using <code>$this->load->model('customers');</code> or
-            it can be implied by configuration in 
-            <code>application/config/autoload.php</code>, with 
-            <code>$autoload['model'] = array('customers',...);</code>.
+    <slide title="CodeIgniter Models" layout="normal">
+        <p>The CodeIgniter Model provides the most abstract
+            and easiest to use level of database support.
         </p>
-        <p>Once loaded, the model becomes a property of your
-            controller, as in <code>$this->customers->...</code>.
-        </p>
-		<p>What <code>CI_Model</code> gives you, inside your model classes,
-		is magic access to any of your controller properties
-			as if they were properties of your model.
-			Most notably, this includes the <code>db</code> property used to access
-			the database driver.
-		</p>
+        <p>Models are bound to a database table.</p>
+        <p>The <code>\CodeIgniter\Model</code> class provides automatic
+            database connection, basic CRUD methods, in-model validation,
+            automatic pagination, and more.</p>
     </slide>
 
-    <slide title="Implementing Models" layout="normal">
-        <div class="left">
-            <p>Some developers prefer to work closely with 
-                <a href="http://www.codeigniter.com/userguide3/database/queries.html" target="_blank">
-                    database
-                    drivers</a>, writing their own SQL statements, as in<br/>
-                <code>$results = $this->db->query(...);</code>
-            </p>
-        </div>
-        <div class="right">
-            <p>Other developers prefer to use the 
-                <a href="http://www.codeigniter.com/userguide3/database/query_builder.html" target="_blank">
-                    Query Builder</a> for
-                a more O-O approach to database manipulation, as in<br/>
-                <code>$model->where(...);<br/>
-                    $model->limit(...);<br/>
-                    $results = $model->get();</code>
-            </p>
-        </div>
+ 
+    <slide title="Your Models" layout="normal">
+        <p>Your models normally go inside <code>app/Models</code>.</p>
+        <p>A typical model might look like:
+        <pre>
+    &lt;?php 
+    namespace App\Models;
+    use CodeIgniter\Model;
+    class UserModel extends Model
+    {
+        protected $table      = 'users';
+        protected $primaryKey = 'id';
+        protected $validationRules    = [
+            'username'     => 'required|alpha_numeric_space|min_length[3]',
+            'email'        => 'required|valid_email|is_unique[users.email]',
+            'password'     => 'required|min_length[8]',
+            'pass_confirm' => 'required_with[password]|matches[password]'
+        ];
+    }            
+        </pre></p>
     </slide>
-
-    <slide title="Using a Base Model" layout="normal">
-        <div class="left">
-            <p>Many developers use a base model (<code>application/core/MY_Model</code>)
-                to provide a consistent implementation of the base model methods
-                they want for their webapp. This typically includes all of the 
-                CRUD methods, regardless of their style (driver or query builder).</p>
-            <p>Your webapp models would then extend the base model, and implement
-                usecase-specific methods.</p>
-        </div>
-        <div class="right">
-            <p>An example using a base model:</p>
-            <code>
-                class Sales extends MY_Model {<br/>
-&#160;&#160;function __construct() {<br/>
-&#160;&#160;&#160;&#160;parent::__construct();<br/>
-&#160;&#160;}<br/>
-                <br/>
-&#160;&#160;function new_order(...) {}<br/>
-&#160;&#160;function add_item(...) {}<br/>
-&#160;&#160;function calc_tax(...) {}<br/>
-&#160;&#160;function receipt(...) {}<br/>
-                <br/>
-                }
-            </code>
-        </div>
-    </slide>
-
-    <slide title="Misusing a Base Model?" layout="normal">
-        <p>The CodeIgniter core classes can be extended by
-            having a <code>MY_classname.php</code> inside 
-            <code>application/core</code>. You might have noticed, with
-            <code>application/core/MY_Controller.php</code>, that
-            the class name inside that source file does not *have* to
-            match the MY_... naming convention. We saw that with our
-            original example, with the <code>Welcome</code> controller extending
-            <code>Application</code>.
-        </p>
-        <p>CodeIgniter instantiates a singleton when a model
-            or other core class is loaded, which makes it
-            awkward to deal with interfaces or abstract classes. 
-            However,  we can exploit
-            the general treatment of included source files by
-            having more than one thing inside one.</p>
-    </slide>
-
-    <slide title="Here is a Fancy Base Model!" layout="normal">
-        <p>
-            <a href="https://github.com/jedi-academy/CodeIgniter3.1-starter3/blob/master/application/core/MY_Model.php" target="_blank">
-                Here</a> is a "fancy" model. The source file includes
-            a <code>Data_mapper</code> interface, as well as a
-            <code>MY_Model</code> class.
-            You could use this as a template for writing
-            adapters for other kinds of models (folders, XML, etc).</p>
-        <p>As long as one of your models, extending MY_Model, is loaded
-            first, the <code>Data_mapper</code> interface will be
-            accessible to you.</p>
-        <p>You could add additional models to the file, for instance 
-            <code>Xml_Model</code> or <code>Folder_Model</code>,
-            each implementing <code>Data_mapper</code>. Note that
-            this is not necessarily a "best" practice", just a 
-            "possible" one, exploiting the current CodeIgniter.
-            There will be better and more proper ways to do this
-            with the next version!
-        </p>
-    </slide>
-
-    <slide title="Example Working With DB Driver" layout="normal">
-        <p>
-            <code>$query = $this-&gt;db-&gt;query('SELECT name, title, email 
-                FROM customers');</code>
-        </p>
-        <p>
-            <code>foreach ($query->result() as $row) {<br/>
-                &#160;&#160;echo $row-&gt;title;<br/>
-                &#160;&#160;echo $row-&gt;name;<br/>
-                &#160;&#160;echo $row-&gt;email;<br/>
-                }</code>
-        </p>
-        <p>
-            <code>echo 'Total Results: ' . $query-&gt;num_rows(); </code>
-        </p>
-    </slide>
-
-    <slide title="Example Working With Query Builder" layout="normal">
-        <p>
-            <code>$query = $this-&gt;db-&gt;get();</code>
-        </p>
-        <p>
-            <code>foreach ($query-&gt;results() as $row) {<br/>
-                &#160;&#160;echo $row-&gt;title;<br/>
-                &#160;&#160;echo $row-&gt;name;<br/>
-                &#160;&#160;echo $row-&gt;email;<br/>
-                }</code>
-        </p>
-        <p>
-            <code>echo 'Total Results: ' . $query-&gt;count_all(); </code>
-        </p>
-		<p>The difference between this approach and working directly with
-		the database driver: no SQL needed.</p>
-    </slide>
-
-    <slide title="2. OBJECT-RELATIONAL MAPPING" layout="normal" tag="tag5">
-        <div class="left">
-            <p>
-                <a href="http://en.wikipedia.org/wiki/Object-relational_mapping" 
-                   target="_blank">Object-relational mapping</a> 
-                is a programming technique or convention for converting
-                data between an object model/state and a relational database 
-                model/state.
-            </p>
-            <p>It is usually implemented by a tool or package which
-				does one or more of:</p>
-            <ul>
-                <li>From a database schema, generates an ERD, class diagram, and then code</li>
-                <li>From a class diagram, generates code, an ERD and a schema</li>
-                <li>From an ERD, generates a schema, and a class diagram and code</li>
-            </ul>
-        </div>
-        <div class="right">
-            <br/>
-            <img class="scale" width="550" height="375" src="/pix/lessons/4/4-8.png"/>
-        </div>
-    </slide>
-
-    <slide title="ORMs, Really..." layout="normal">
-        <p>In the PHP environment, object-relational mapping is typically
-            effected by a third-party tool or plugin.</p>
-        <p>These tools attempt to automatically create the robustness of JavaBeans
-            with the persistence of Enterprise JavaBeans.</p>
-        <p>These are notoriously awkward to implement properly.</p>
-        <p>Several such packages are available for CodeIgniter:
-            <a href="http://www.doctrine-project.org/" target="_blank">Doctrine</a>,
-            <a href="http://laravel.com/docs/4.2/eloquent" target="_blank">Eloquent</a>, and
-            <a href="http://propelorm.org/" target="_blank">Propel</a>.
-            You're on your own using them, though - not part of this course!
-        </p>
-    </slide>
-
-    <slide title="Objects From Results" layout="normal">
-        <p>When PHP returns a result set from a relational
-            database query, it usually does so as an
-            iterable collection of row objects.
-            Each row object has properties corresponding to the table
-            column names that the data came from.</p>
-        <p>If a row object is cast as an array, the result is an associative 
-            array with the table column names as indices.</p>
-        <p>Many developers consider the objects and/or associative 
-            arrays returned by the database layer to be a simple form of ORM.
-            CodeIgniter's perspective is that this suffices for most
-            cases, and accordingly does not include or bundle a "proper" ORM.</p>
-        <p>CodeIgniter does support a crude form of entity object
-            support, where you can specify that the object resulting from
-            a query be of a specific type. See the <a href="http://www.codeigniter.com/user_guide/database/results.html#custom-result-objects" target="_blkank">User Guide</a>
-            for more details.
-        </p>
-    </slide>
-
-    <slide title="3. DATABASE UTILITIES" layout="normal" tag="tag6">
-        <p>CodeIgniter has two classes specifically to manipulate databases.</p>
-        <p>The <a href="http://www.codeigniter.com/userguide3/database/forge.html" 
-                  target="_blank">Database Forge</a> class 
-            helps you work with metadata.
-            <ul>
-                <li>Create or drop entire databases</li>
-                <li>Create, drop or modify tables</li>
-            </ul>                  
-        </p>
-        <p>The <a href="http://www.codeigniter.com/userguide3/database/utilities.html" 
-                  target="_blank">Database Utilities</a> class 
-            helps you work with metadata.
-            <ul>
-                <li>List databases</li>
-                <li>Backup or export databases</li>
-                <li>Repair or optimize databases</li>
-                <li>Extract or convert records (CSV, XML)</li>
-            </ul>                  
-        </p>
-    </slide>
-
-    <slide title="Database Migrations" layout="normal">
-        <p>Although not considered part of the core database components,
-			CodeIgniter provides a <a href="" target="_blank">Migrations library</a>
-			to make it easier to accommodate database changes
-			across versions of your webapp.</p>
-        <p>This is commonly used to alter table definitions or to add
-			tables, with a new release of your app.              
-        </p>
-		<p>
-			It is mentioned here for completeness, but is out of scope
-			for our work.</p>
-    </slide>
-
-    <slide title="4. SUGGESTED MODEL CONVENTIONS" layout="normal" tag="tag7">
-        <p>Use entity-related naming!</p>
-        <p>Use the plural of an entity name for a table &amp; model name.
-            An example would be the <code>Posts</code> model for
-            the <code>posts</code> table.
-        </p>
-        <p>Use the singular of the entity name either for either a model or a 
-            RESTful CRUD controller. Yes, this is confusing.
-            The former practice is suggested by conventional entity modeling,
-            while the latter is suggested by RESTful principles :-S
-        </p>
-        <p>Avoid controllers and models with the same class name. Only one will
-            be loaded. Namespaces (coming in CI4) address this issue.</p>
-    </slide>
-
-    <slide title="5. DATABASE CONFIGURATION" layout="normal" tag="tag8">
-        <div class="left">
-            <p>Your database access is configured by settings in 
-                <code>application/config/database.php</code>, or
-                in environment-specific subfolders there for
-                "development", "testing" or "production".</p>
-            <p>Read the 
-                <a href="http://www.codeigniter.com/userguide3/libraries/config.html" 
-                   target="_blank">Config class</a>
-                writeup carefully, as you want to use subfolders inside
-                <code>application/config</code> to hold environment
-                specific database configuration, for instance the
-                username, password and database name to use when your
-                webapp is deployed. <strong><code>git ignore</code></strong> any
-                such subfolders, so you don't disclose confidential information.
-            </p>
-        </div>
-        <div class="right">
-            <p>
-                <code>$db['default'] = array(<br/>
-&#160;&#160;'dsn'   => '',<br/>
-&#160;&#160;'hostname' => 'localhost',<br/>
-&#160;&#160;'username' => 'root',<br/>
-&#160;&#160;'password' => '',<br/>
-&#160;&#160;'database' => 'database_name',<br/>
-&#160;&#160;'dbdriver' => 'mysqli',<br/>
-&#160;&#160;'dbprefix' => '',<br/>
-&#160;&#160;...<br/>
-&#160;&#160;);</code>
-            </p>
-        </div>
-    </slide>
-
-    <slide title="Database Conventions" layout="normal">
-        <p>For our purposes, I will expect your database configuration 
-            to work seemlessly when I pull your labs or
-            assignments for marking. What this means:</p>
+   
+    <slide title="Database Utilities" layout="normal">
+        <p>Apart from the basic database support layers, CodeIgniter comes with some utility classes to help you manage your
+            databases:
         <ul>
-            <li>
-                <code>application/config/database.php</code> should be unchanged</li>
-            <li>
-                <code>application/config/development/database.php</code> should
-                hold your database configuration settings</li>
-            <li>
-                <code>application/config/development</code> is "git ignored"</li>
-            <li>Each team member then uses their own database
-                configuration</li>                    
-            <li>I will add my <code>application/config/development</code>
-                folder, with my settings, when I test your work</li>
-        </ul>
+            <li>Database Forge, to create or modify tables and databases</li>
+            <li>Database migrations, to modify database structure in synch with
+                app updates</li>
+            <li>Database seeding, a simple way to add sample data to your tables.</li>
+        </ul>        
+        </p>          
     </slide>
 
-    <slide title="&quot;Submission&quot; Conventions" layout="normal">
-        <p>If you use a database in a project, clearly
-            indicate so in your repo readme, and provide a SQL
-            dump (gzipped) of your database, including dropping
-            any tables you use before creating them, and
-            including the insert statements to populate
-            your database, for instance as the file 
-            <code>setup.sql</code> or <code>setup.sql.gz</code>
-            in the <code>data</code> folder in your project.</p> 
-        <p>Do NOT include a CREATE DATABASE statement in your SQL!</p>
-        <p>Do NOT make any assumptions about the database name
-            that will be used when your webapp
-            is run on another system!</p>
-        <p>If your webapp breaks because it
-            uses the wrong database, you may be fired.<br/>
-            If you don't provide a database dump, and I 
-            cannot run your webapp at all, you're definitely fired.
+    <slide title="Life Beyond RDBs?" layout="normal">
+        <p>It is important to understand how fundamental the RDB perspective
+            is, in CodeIgniter and other webapp frameworks.</p>
+        <p>Support for document databases is often an afterthought,</p>
+        <p>RDB database support is very powerful, but also assumes a high level 
+            of familiarity with RDBs and
+            their tools.</p>
+        <p>Next week, we will introduce you to <code>Simple\Models</code>, making life a lot
+            easier. We will use those for the remainder of the course :)</p>
+    </slide>
+
+    <slide title="Database Configuration" layout="normal">
+        <p>Your database access is configured by settings in 
+            <code>app/Config/Database.php</code>, or
+            in a <code>.env</code> file in your
+            project root.</p>
+        <p>The latter is the preferred approach, as the file can
+            be "git ignored", so it doesn't get saved in a public
+            code repository.
         </p>
+
     </slide>
-
-
+-->
 </lesson>
