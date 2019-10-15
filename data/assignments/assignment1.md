@@ -26,6 +26,7 @@ have a unique category.
 - Chengyue - football
 - Hao Gong - Chinese anime stars
 - Yingzheng -  basketball
+- Zixi Zhang - comic stars
 
 ## Goals for This Assignment
 
