@@ -76,6 +76,10 @@ Additionally, and public files, such as images, should go into
 `public/images/xxx`, where xxx is your category name.
 You should also put there a 100x100 PNG icon, named after your category.
 
+**Important** Because of the way that CodeIgniter does its routing,
+name your folder inside `app/Controllers` with the first letter capitalized,
+eg. `app/Controllers/Hockey`. Sorry I didn't see this earlier.
+
 ## Your Category Data
 
 Your mock data should include at least eight fields:
