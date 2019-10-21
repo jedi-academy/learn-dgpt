@@ -45,21 +45,18 @@ Course organizer for Comp4711
         <topic>Relational Models</topic>
         <outcomes>1.2 (models)</outcomes>
         <lesson name="models" >Models</lesson>
-       <lesson name="modeling" icon="read" >Modeling resources</lesson>
+        <lesson name="modeling" icon="read" >Modeling resources</lesson>
         <assignment name="assignment1">Heroes: the Beginning</assignment>
     </week>
     <week num="7">
         <topic>Non-relational models</topic>
-        <!--       <lesson name="documents" >Document Models</lesson>
-               <lab name="lab05" >Models with Presenter</lab>
- 
-                <tutorial name="mongodb">MongoDB</tutorial>
-        -->
+        <lesson name="documents" >Simple Models</lesson>
+        <lab name="lab05">Models</lab>
     </week>
     <week num="8">
         <topic>Responses</topic>
         <outcomes>1.2, 3</outcomes>
-        <!--
+        <!--   <lab name="lab05" >Models with Presenter</lab>
                 <lesson name="responses">Building Responses</lesson>
                 <assignment name="assignment1">RESTish Backend</assignment>
         -->

@@ -36,3 +36,7 @@ We will take a quick look at models in CodeIgniter 4, but will spend
 most of our time helping you complete Assignment 1.
 
 The "Building responses" topic moves to week 8.
+
+## Week 7 - Oct 22
+
+We are going to show you how to use simple models for simple data :)

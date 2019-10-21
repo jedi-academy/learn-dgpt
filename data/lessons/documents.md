@@ -1,5 +1,5 @@
-# Seminar #8 - Documents
-COMP4711 - BCIT - Winter 2019
+# Seminar #7 - Document Models
+COMP4711 - BCIT/DGPT - Fall 2019
 
 ## Databases
 
@@ -22,19 +22,56 @@ DDB can have schema to constrain structure
 <img src="/pix/lessons/x/i6.png"/>
 
 
-## MongoDB as an example
+## Simple Models
 
-<img src="/pix/lessons/x/mongodb-model.png"/>
+We have a Simple Model  for you to work with from this point forward.
 
-MongoDB uses BSON ... JSON + binary data + object identity
+- uses a document for persistent storage,
+- provides a subset of the Model/RDB interface
+- doesn't need a database server
 
-CRUD is the same in both worlds
+This approach has drawbacks:
 
-MongoDB has "Connector for BUsiness Intelligence",
-but it is only one way
+- can only handle small collections (1000 documents?)
+- meant for simplicity, not speed
+- no data typing (everything is strings)
 
-## CodeIgniter & MongoDB
+There are some good things too:
 
-- not a first class citizen
-- the plan: DocumentModel mirroring Model --> v4.1
-- interim approach: ResourceController using [mongodb PHP library](https://docs.mongodb.com/php-library/current/)
+- data files can be edited with a text editor
+- using the API will help you with CodeIgniter's Model in future
+
+# Jedi- Academy / Simple-Models
+
+Let's take a look ... https://github.com/jedi-academy/simple-models
+
+1. Choose a data persistence format: CSV, JSON or XML
+
+2. Your model will then extend Simple\Models\CSVModel etc
+
+3. You need three properties:
+    
+-    $origin - Persistent path & filename for this model
+-    $keyField - Name of the primary key property
+-    $validationRules - Rules used to validate data
+
+## SimpleModel API
+
+### Retrieve documents
+
+- **find($id)** to get one
+- **findAll($limit,$offset)** to get some or all
+
+### CRUD
+
+- **save($data)** to add or update a document
+- **insert($data,$returnID)** to add a document, and optionally gets its ID
+- **update($id,$data)** to update a document
+- **delete($id)** to delete a document
+- **exists($id)** to see if a document exists
+
+### Miscellaneous
+
+- **getValidationRules()** to get the rules used for validation
+- **count()** to get the size of the collection
+
