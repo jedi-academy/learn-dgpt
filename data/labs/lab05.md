@@ -23,7 +23,7 @@ A marking rubric will be attached to the dropbox.
 
 This is not a collaborative lab, but an individual one.
 You will be working directly with your own repository,
-and your branch will be `origin master`. You can just push to that
+and your branch will be `origin develop`. You can just push to that
 branch, without creating a pull request.
 We will return to shared repos, and gitflow workflow, with the assignments. 
 
@@ -113,7 +113,7 @@ If not:
 
 Each resynching:
 
-    # save & commit your current work
+    # save & commit your current work, and then...
     git checkout master
     git pull upstream master
     git push origin master
