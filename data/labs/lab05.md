@@ -66,7 +66,7 @@ and you won't need any pull requests to the starter repo.
 Locally, inside your project, `git status` should show  on you "develop"
 branch, with nothing new.
 
-`git remote -v` show show "origin" aliased to your fork.
+`git remote -v` should show "origin" aliased to your fork.
 
 Run the app, either inside Apache or from the command line if that is
 easier: `php spark server` from your project root.
@@ -84,7 +84,7 @@ Build your model, eg. `app/Models/Places.php`
 Remember:
 
 - namespace the class
-- "use" the simple model class
+- "use" the simple model class appropriate for your type of data
 - your class "extends" that one
 
 ## Step 3
@@ -106,7 +106,7 @@ The `Simple\Models` module is very experimental, and I will likely update it
 while the lab is in progress.
 Whenever I do that, I will post a "RESYNCH LAB05" message on our wechat channel.
 
-To resynch, make sure that the have the starter lab aliased ("upstream").
+To resynch, make sure that you have the starter lab aliased ("upstream").
 If not:
 
     git remote add upstream https://github.com/jedi-academy/dgpt4711lab05.git
@@ -119,7 +119,7 @@ Each resynching:
     git push origin master
     git checkout develop
     git merge master
-    git push origin
+    git push origin develop
 
 This will merge any changes into your project.
 
