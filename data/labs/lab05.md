@@ -45,6 +45,14 @@ We will be building this during lab, using the same data as last week (but not m
 The mock data includes the names of some image files, which you 
 will find inside the `public/images` folder.
 
+### Quick Note
+
+The simple-models module was supposed to be made as a composer-installable
+addin, but I messed up its setup. I copied the module into the `app/Models` 
+folder, where it is useable for this lab.
+
+The simple-models namespace is `App\Models\Simple`.
+
 ### The Views
 
 Three views are provided, in `app/Views`:
