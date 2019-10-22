@@ -77,7 +77,7 @@ branch, with nothing new.
 `git remote -v` should show "origin" aliased to your fork.
 
 Run the app, either inside Apache or from the command line if that is
-easier: `php spark server` from your project root.
+easier: `php spark serve` from your project root.
 
 You should see the homepage, but both links on it will be broken.
 
