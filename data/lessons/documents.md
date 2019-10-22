@@ -47,7 +47,7 @@ Let's take a look ... https://github.com/jedi-academy/simple-models
 
 1. Choose a data persistence format: CSV, JSON or XML
 
-2. Your model will then extend Simple\Models\CSVModel etc
+2. Your model will then extend Simple\CSVModel etc
 
 3. You need three properties:
     
