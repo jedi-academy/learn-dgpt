@@ -1,96 +1,97 @@
-# Lab #6 - A Taste of XML
-COMP4711 - BCIT - Winter 2019
+# Lab #6 - Generated Places
+COMP4711 - BCIT/DGPT - Fall 2019
 
 ## Lab Goals
 
-The purpose of this lab is to give you a taste of XML,
-in a simple yet rich enough context.
+The purpose of this lab is to give you a taste of some view generation.
 
-You have the role of Snow White, and need to assign
-chores to the seven dwarfs.
+This is an individual lab, with each student ending up with their own repository.
 
-You are given a starter SQL file, to create an RDB to use.
-It contains tables for jobs to do, and related descriptions,
-as well for the work crew.
 
-Your app will present
-
-## Lab Teams & Submission
-
-I have setup a new set of groups for the remaining labs, "pairs".
-Signup for one of these, with a partner if you like.
-This will suit pair programming.
-
-You are to share a github repository. No need to fork & branch, but
-do use PRs for changes. If you both want to work on it, the creator can add
-the other pair member with commit rights.
+## Lab Submission
 
 Submit a readme *text* file, or a submission comment, to the lab dropbox. 
-It should contain a link to your github repository.
+It should contain your github username. I can find the repositories from
+the starter project forks.
 
-Due: this coming Sunday at 17:30.
+Due: this Sunday at 17:30
 
-## Lab Marking Guideline
+A marking rubric will be attached to the dropbox.
 
-A marking rubric will be attached to the lab 6 dropbox.
+# The Lab:
 
-## Your jobs
+This is not a collaborative lab, but an individual one.
+You will be working directly with your own repository,
+and your branch will be `origin develop`. You can just push to that
+branch, without creating a pull request.
+We will return to shared repos, and gitflow workflow, with the assignments. 
 
-### 1. Repository setup
+You are to continue working with the repository that you started last week, namely
+the Lab 5 Starter.
 
-Create a new repository, using either the CodeIgniter4 appstarter
-of devstarter.
 
-### 2. Database setup
+## The App
 
-Create a new MySQL database, using the [starter SQL script](/data/tasks.sql).
+I bet you can see whats coming today :)
 
-You should end up with seven tables in it.
+You have existing controllers and a model (from last week).
+Now we get to ework on the views!
+### The Views
 
-### 3. Models
+Three views are provided, in `app/Views`:
 
-Create simple models for each of the tables in your database.
-You should be able to extend the CI model, and bind each of yours to the
-appropriate table.
+- `home.php` is the homepage, with a link that will not
+    work until the model is in place.
+- `placeslist` is a page showing all of the travel
+    destinations, with substitution fields that your
+    controller will provide.
+- `oneplace` is a page showing all of the data for a single
+    travel destination, with an image link that we will provide
+    a controller for.
 
-### 4. Chores controller
+## Step 1
 
-Create a `Chores` controller. Its `index` method should display
-an unordered list of the dwarfs, with each name linking to
-the `assign` method of the Chores controller, with the
-respective dwarf's ID as a URI segment.
+Split the "placeslist" display into three strips.
 
-Modify your routes so that this is the default controller.
+## Step 2
 
-### 5. Assigning chores
+Replace the simple list of places from "placeslist" with a generated table.
+Do not use the place image name.
 
-The `assign` method should build a SimpleXML document, containing
-three first level properties: `name`, `role` and `chores`.
-Values for the first two should come from that dwarf's record.
+## Step 3
 
-Choose three tasks randomly, from the ones in the `Tasks` model. For each,
-add a `task` child element to the `chores` property.
-The `task` element shall include its ID, description, priority, and group.
-The latter two need to be retrieved from the appropriate model.
+Replace the "oneplace" view with a constructed form for editing, for the
+chosen place. You may show the place's image aboce the form (not part of it).
 
-Return the string representation of the SimpleXML document
-as your controller response. This is a "normal" controller,
-not an API or RESTish one.
+For now, the target of a "submit" button should be "#", i.e. "do nothing".
+We will add that next.
 
-### 6. Polish
 
-Make sure your code is formatted, and your `Chores` controller formatted
-so that both you & I can follow along.
+# And?
 
-### 7. Cleanup
+Run your app, and get it working as best you can, with our assistance.
 
-Delete any PR branches; you should only have one branch standing by the end.
+## Notes
 
-## Help?
+The `Simple\Models` module is very experimental, and I will likely update it
+while the lab is in progress.
+Whenever I do that, I will post a "RESYNCH LAB05" message on our wechat channel.
 
-Here are some useful links, should you need them:
+To resynch, make sure that you have the starter lab aliased ("upstream").
+If not:
 
-- The [PHP Manual](http://php.net/manual/en/book.simplexml.php) will likely be referenced frequently.
-- [PHPro](https://phpro.org/tutorials/Introduction-To-SimpleXML-With-PHP.html)
-- [BitDegree](https://www.bitdegree.org/learn/php-xml)
-- [W3Schools](https://www.w3schools.com/php/php_xml_simplexml_read.asp) has a brief tutorial
+    git remote add upstream https://github.com/jedi-academy/dgpt4711lab05.git
+
+Each resynching:
+
+    # save & commit your current work, and then...
+    git checkout master
+    git pull upstream master
+    git push origin master
+    git checkout develop
+    git merge master
+    git push origin develop
+
+This will merge any changes into your project.
+
+You may need to resolve merge conflicts!

@@ -40,3 +40,8 @@ The "Building responses" topic moves to week 8.
 ## Week 7 - Oct 22
 
 We are going to show you how to use simple models for simple data :)
+
+## Week 8 - Oct 29
+
+We take a deeper dive into views, down to an introduction
+to presenters.

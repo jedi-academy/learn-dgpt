@@ -17,9 +17,7 @@ Course organizer for Comp4711
         <outcomes>3.1, 3.2</outcomes>
         <lesson name="dev01" icon="dothis">Devops Workflow Concepts</lesson>
         <lab name="lab02">Collaborative Workflow</lab>
-        <!--
-                <lab name="lab02faq">Some lab notes</lab>
-        -->
+
     </week>
     <week num="3">
         <topic>Collaborative Workflow</topic>
@@ -54,16 +52,15 @@ Course organizer for Comp4711
         <lab name="lab05">Models</lab>
     </week>
     <week num="8">
-        <topic>Responses</topic>
+        <topic>Building Views &amp; Responses</topic>
         <outcomes>1.2, 3</outcomes>
-        <!--   <lab name="lab05" >Models with Presenter</lab>
-                <lesson name="responses">Building Responses</lesson>
-                <assignment name="assignment1">RESTish Backend</assignment>
-        -->
+        <lesson name="views">Building Views</lesson>
+        <lab name="lab06" >Generated Places</lab>
     </week>
     <week num="8">
         <topic>Representation Glue - XML &amp; JSON</topic>
         <!--
+        <lesson name="presenter">Building Views</lesson>        
                 <lesson name="xml_json" >X M L &amp; J S O N</lesson>
                 <github name="xml" link="https://github.com/jedi-academy/example-xml">XML Examples</github>
                 <github name="example-simplexml" link="https://github.com/jedi-academy/example-simplexml-winter2016" >SimpleXML Examples</github>
