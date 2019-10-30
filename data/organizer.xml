@@ -57,10 +57,14 @@ Course organizer for Comp4711
         <lesson name="views">Building Views</lesson>
         <lab name="lab06" >Generated Places</lab>
     </week>
+    <week num="9">
+        <topic>Heroes: the Awakening</topic>
+        <outcomes>1.2, 3</outcomes>
+        <lesson name="presenter">ResourcePresenter</lesson>        
+    </week>
     <week num="8">
         <topic>Representation Glue - XML &amp; JSON</topic>
         <!--
-        <lesson name="presenter">Building Views</lesson>        
                 <lesson name="xml_json" >X M L &amp; J S O N</lesson>
                 <github name="xml" link="https://github.com/jedi-academy/example-xml">XML Examples</github>
                 <github name="example-simplexml" link="https://github.com/jedi-academy/example-simplexml-winter2016" >SimpleXML Examples</github>
