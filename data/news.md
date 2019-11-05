@@ -45,3 +45,13 @@ We are going to show you how to use simple models for simple data :)
 
 We take a deeper dive into views, down to an introduction
 to presenters.
+
+## Week 9 - Nov 5
+
+I have a brief presentation explaining what a "Presenter" is,
+and you can then dive into assignment #2 :)
+
+## Week 10 - Nov 12
+
+I will explain any unclear points, and then we can help
+you complete (hopefully) assignment 2.
