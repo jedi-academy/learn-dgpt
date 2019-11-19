@@ -61,9 +61,19 @@ just those to support the first few views...
 
 User guide reference: https://codeigniter4.github.io/userguide/incoming/restful.html
 
+## Late Addition
+
+Per class discussion, we will add the editing ability to your heroes app!
+
+We left off before with the individual heros presented using an HTML form.
+After the last lab, we can take that through to validation and updating.
+
+Add validation rules for your hero data, and add the form handling like we 
+did in lab.
+
 ## Assignment submission
 
 Submit a note to the assignment dropbox, with your github username and
 assigned category.
 
-Due date: Sunday, Nov 17, 17:30
+Due date: Sunday, Dec 1, 17:30

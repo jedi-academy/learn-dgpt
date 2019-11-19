@@ -55,3 +55,12 @@ and you can then dive into assignment #2 :)
 
 I will explain any unclear points, and then we can help
 you complete (hopefully) assignment 2.
+
+## Week 11 - Nov 20
+
+We are going to look into handling form input, with validation.
+This will build on our previous lab, and will be our last one.
+
+## Week 12 - Nov 26
+
+Our last class, and your chance to get help completing assignment 2!

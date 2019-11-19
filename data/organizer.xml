@@ -60,7 +60,7 @@ Course organizer for Comp4711
     <week num="9">
         <topic>Heroes: the Awakening</topic>
         <outcomes>1.2, 3</outcomes>
-        <lesson name="presenter">ResourcePresenter</lesson>        
+        <lesson name="presenters">ResourcePresenter</lesson>        
         <assignment name="assignment2">Heroes: the Awakening</assignment>
     </week>
     <week num="8">
@@ -73,31 +73,13 @@ Course organizer for Comp4711
         -->
     </week>
     <week num="9">
-        <topic>Transport Glue - HTTP</topic>
-        <outcomes>2.1, 2.2</outcomes>
-        <!--
-               <lesson name="net01" >Transport glue</lesson>
-               <lesson name="net02" icon="read">Traditional emitting HTTP requests</lesson>
-               <lesson name="net03">CodeIgniter 4 emitting HTTP requests</lesson>
-               <lab name="lab07">Transport glue</lab>
-        -->
+        <topic>Form Handling</topic>
+               <lesson name="handling" >Handling Input</lesson>
+               <lab name="lab07">Form Handling</lab>
     </week>
     <week num="10">
-        <topic>Application Glue - REST</topic>
-        <outcomes>2.1, 2.3</outcomes>
-        <!--
-               <lesson name="advanced01" >Authentication</lesson>
-               <lesson name="advanced04" >Response Formatting</lesson>
-               <assignment name="assignment2">RESTful Backend</assignment>
-        -->
-    </week>
-    <week num="12">
         <topic>Assignment Completion</topic>
-        <outcomes>2.1, 2.3</outcomes>
-    </week>
-    <week num="12">Project reviewAssignment Completion>
-        <topic>Assignment Completion</topic>
-        <outcomes>2.1, 2.3</outcomes>
+        <assignment name="assignment2">Heroes: the Awakening (updated)</assignment>
     </week>
     <week num="zz">
         <topic>REFERENCE</topic>
